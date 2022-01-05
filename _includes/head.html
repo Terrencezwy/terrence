@@ -1,21 +1,18 @@
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% if page.keywords %}
-  <meta name="keywords" content="{{ page.keywords }}">
-  {% endif %}
-  <meta name="robots" content="all"/>
-  <meta name="author" content="{{ site.author.name }}">
-  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
-  <meta property="og:image" content="{% if page.title %}{% else %}{{"/images/avatar.jpeg" | prepend: site.baseurl}}{% endif %}">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-  {% capture blogtitle %}{{page.title}}{%endcapture%}
-  <title>{% if page.title %}{{ page.title }}{% else %}Главная | {{ site.title }}{% endif %}</title>
-  
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <link rel="shortcut icon" href="{{ "/images/favicon.ico" | prepend: site.baseurl }}" type="image/x-icon">
-  <link rel="stylesheet" href="{{"/assets/css/animate.css" | prepend: site.baseurl}}">
-  <script src="{{"/assets/js/jquery.min.js" | prepend: site.baseurl}}"></script>
-</head>
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description }}">
+
+<link rel="apple-touch-icon" sizes="180x180" href="{{ "/assets/icon/apple-touch-icon.png" | absolute_url }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ "/assets/icon/favicon-32x32.png" | absolute_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/icon/favicon-16x16.png" | absolute_url }}">
+<link rel="manifest" href="{{ "/assets/icon/manifest.json" | absolute_url }}">
+<link rel="mask-icon" href="{{ "/assets/icon/safari-pinned-tab.svg" | absolute_url }}" color="#5bbad5">
+<link rel="shortcut icon" href="{{ "/assets/icon/favicon.ico" | absolute_url }}">
+<meta name="msapplication-config" content="{{ "/assets/icon/browserconfig.xml" | absolute_url }}">
+<meta name="theme-color" content="#ffffff">
+
+<!-- CSS -->
+<link rel="stylesheet" href="{{ "/assets/css/main.css" | absolute_url }}" />
+<noscript><link rel="stylesheet" href="{{ "/assets/css/noscript.css" | absolute_url }}" /></noscript>
